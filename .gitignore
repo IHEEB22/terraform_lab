@@ -1,7 +1,0 @@
-local terraform dir 
-.terraform/*
-terraform state files
-*.tfstate
-*.tfstate.*
-tf variables files may include sensetive data
-*.tfvars

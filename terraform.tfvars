@@ -1,0 +1,6 @@
+namespace        = "default"
+config_file_path = "../../.kube/config"
+deployment_name  = "nginx-service"
+service_name     = "nginx-deployment"
+app_name         = "nginx"
+container_name   = "nginx"
