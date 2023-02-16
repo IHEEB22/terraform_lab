@@ -8,13 +8,13 @@
 
 ### apply configuration with variables
 
-    terraform apply -var-file terraform-dev.tfvars
+    terraform apply -var-file terraform.tfvars
 
 ### destroy a single resource
 
-    terraform destroy -target aws_vpc.myapp-vpc
+    terraform destroy -target resource.name
 
-### destroy everything fromtf files
+### destroy everything from tf files
 
     terraform destroy
 
@@ -24,8 +24,4 @@
 
 ### show current state of a specific resource/data
 
-    terraform state show aws_vpc.myapp-vpc    
-
-### set avail_zone as custom tf environment variable - before apply
-
-    export TF_VAR_avail_zone="eu-west-3a"
+    terraform state show resource.name    
