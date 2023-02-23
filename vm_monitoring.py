@@ -18,6 +18,7 @@ from azure.mgmt.resource import ResourceManagementClient
 def deploy_b1s_vm():
     # Provide your private subcription id 
     SUBSCRIPTION_ID = "x-x-x-x-x"
+#     GROUP_NAME,VIRTUAL_MACHINE_NAME and DISK variables depends on your terraform configuration (must be changed)  
     GROUP_NAME = "rg-cool-spider"
     VIRTUAL_MACHINE_NAME = "myVM"
     DISK="myOsDisk"
@@ -55,7 +56,7 @@ def deploy_b1s_vm():
     print('                        wait for 5 seconds  ...                      ')
     print('---------------------------------------------------------------------')
 
-    
+# every 5 seconds the vm state will be checked 
 schedule.every(5).seconds.do(deploy_b1s_vm)
 try :
     while 1 :
