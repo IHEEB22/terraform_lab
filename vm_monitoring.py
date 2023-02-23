@@ -16,8 +16,8 @@ from azure.mgmt.resource import ResourceManagementClient
 
 
 def deploy_b1s_vm():
-
-    SUBSCRIPTION_ID = "6a94b8ef-60d8-4825-8249-e29f86430566"
+    # Provide your private subcription id 
+    SUBSCRIPTION_ID = "x-x-x-x-x"
     GROUP_NAME = "rg-cool-spider"
     VIRTUAL_MACHINE_NAME = "myVM"
     DISK="myOsDisk"
