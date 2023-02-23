@@ -25,3 +25,7 @@
 ### show current state of a specific resource/data
 
     terraform state show resource.name    
+    
+### download required packages for the python script 
+    
+    pip install -r requirements.txt 
