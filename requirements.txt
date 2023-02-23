@@ -1,0 +1,6 @@
+azure-identity
+azure-mgmt-containerservice
+azure-mgmt-monitor
+schedule
+time
+msrestazure
