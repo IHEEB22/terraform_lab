@@ -1,0 +1,21 @@
+name: Deploy Infrastructure
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Terraform CLI
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: "1.0.9"
+      - name: Terraform init
+        run: terraform init
+      - name: Terraform apply
+        run: echo "terraform apply --auto-approve"
+      - name: Set up Ansible CLI
+        run: sudo apt-get update && sudo apt-get install -y ansible
